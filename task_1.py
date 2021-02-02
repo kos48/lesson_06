@@ -7,3 +7,26 @@
 Задачу можно усложнить, реализовав проверку порядка режимов, и при его нарушении выводить соответствующее сообщение и
 завершать скрипт.'''
 
+from time import sleep
+
+
+class TrafficLight:
+    _color = ["красный", "желтый", "зеленый"]
+
+    def running(self):
+        # print(self.color)
+        for color in self._color:
+            if color == "красный":
+                print(color)
+                sleep(7)
+            elif color == "желтый":
+                print(color)
+                sleep(2)
+            else:
+                print(color)
+                sleep(8)
+
+while True:  # !!! Бесконечный цикл !!!
+    t=TrafficLight()
+    t.running()
+
